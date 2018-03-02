@@ -1,0 +1,10 @@
+h2 { color: red}
+/* aqui td q e h2 vira vermelho*/
+
+#primeiro {
+    color: blue;
+}
+/* hastag é pra ID. um por vez*/
+
+.titulolista {color: greenyellow}
+/* ponto é pra classe, é um grupo especifico, todo mundo q eu marquei como classe la*/

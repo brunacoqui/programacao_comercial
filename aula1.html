@@ -2,11 +2,16 @@
     <head>
         <title> PComerical Aula 1       </title>
         <meta charset="utf-8"> <!--dizendo q suporta os caracteres do portugues-->
+        <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+        <!--esse link é pra importar o arquivo de css pra cá -->  
+        <script src="JS/funcoes.js"></script>
+        <!--esse script é pra importar o script do outro arquivo pra cá -->  
    </head>
 
     <body>
-        <h1>Aula de Programação Comercial </h1> 
+        <h1 id="primeiro">Aula de Programação Comercial </h1> 
         <h2>Aula 1 </h2>
+        <h2>Teste </h2>
         <h3>Aprendendo HTML</h3> <!--aqui h1 e graned h2 e medio h3 vai diminuindo o tamanho -->    
 
         <img src="IMG/dolphin.jpg" title="Golfinho" height="200" width="200" >
@@ -16,7 +21,7 @@
         <a href="https://www.sinonimos.com.br/" target="self">Página dos sinônimos</a>
         <!-- o target tem q ta aqui pra referenciar// Pg(...)é oq aparece pro usuario A é tag de paragrafo--> 
 
-        <h1> Lista não ordenada</h1> <!-- n ordenada UL, ela é bolinhas de topico -->
+        <h1 class="titulolista"> Lista não ordenada</h1> <!-- n ordenada UL, ela é bolinhas de topico -->
             <ul>
                 <li>Item 1</li>
                 <li>Item 2</li>
@@ -24,7 +29,7 @@
                 <li>Item 4</li>
            </ul>
 
-        <h1> Lista ordenada </h1> <!-- pra ordenada eu uso OL, ela é com numeros-->
+        <h1 class="titulolista"> Lista ordenada </h1> <!-- pra ordenada eu uso OL, ela é com numeros-->
            <ol>
                 <li>Item 1</li>
                 <li>Item 2</li>
@@ -32,17 +37,19 @@
                 <li>Item 4</li>
 
            </ol>
-
-        <table>
-            <caption>Titulo da tabela</caption>
-                <thead>
+           <br><br> <!--N ACOSTUME-->
+        <table> 
+            <caption>Titulo da tabela</caption> <!-- caption é o titulo da tabela-->
+                <thead> <!--no thead eu vou ter oq ta escrito na primeira linha de todas as colunas, aqui eu 
+                detrmino quantidade de coluna -->
                     <tr>
                         <td>Coluna 1</td>
                         <td>Coluna 2</td>
                     </tr>
                 </thead>
 
-            <tbody>
+            <tbody> <!-- no tbody eu vou fazer as celulas dessas colunas, linha por linha, cada TR é uma linha
+            cada TD é uma coluna. na ordem. -->
                 <tr>
                     <td>Linha 1- Coluna 1</td>
                     <td>Linha 1- Coluna 2</td>
@@ -57,17 +64,79 @@
                     <td>Linha 3- Coluna 2</td>
                 </tr>
             </tbody>
-
-
-
-
-
-
-
-
-
-
         </table>
+        <br><br> <!--N ACOSTUME-->
+        <form action="/Cadastro/" method="POST"> <!-- post é enviar pro servidor-->
+            Login: <input type="text" name="login" placeholder="Insira seu login">
+            Senha: <input type="password" name="senha"> <!-- tipo password faz aparecer as bolinhas quando
+                 dgita, input tá dizendo q vai entrar dados.. Vai entrar um dado do tipo texto, o nome dele é login 
+                (pra chamadas futuras) e oq vai ta escrito dentro do campo é insira seu login -->
+            
+            <br><br><br> <!--N ACOSTUME-->
+
+            <input type="radio" name="sexo" value="1" checked> Masculino
+            <input type="radio" name="sexo" value="2"> Feminino
+ <!-- radio é pra uma opção unica, checkbox pode marcar mais q um. o nome da radio tem q ser igual pq é
+só uma opção, no checkbox tem q ser diferente pq vc pode marcar mais q uma opção.... O checked diz q vai
+inicializar marcado. o nome fora da tag é oq aparece.  -->
+            <br><br><!--N ACOSTUME-->
+
+            <input type="checkbox" name="veiculo1" value="bicicleta"> Bicicleta
+            <input type="checkbox" name="veiculo2" value="moto"> Moto
+            <input type="checkbox" name="veiculo3" value="carro"> Carro
+
+            <br><br><br> <!--N ACOSTUME-->
+
+            Curso: 
+            <select name="curso"> <!--ele deixa vc selecionar rolando - igual cidade -->
+                <option value="1"> Ciência da Computação </option>
+                <option value="2"> Direito </option>
+                <option value="3"> Engenharia Civil </option>
+            </select>
+
+             <br><br><!--N ACOSTUME-->
+
+            Mensagem: <textarea name="msg" rows="10" cols="30"></textarea> 
+
+            <br><br><!--N ACOSTUME-->
+            Idade: <input type="number" name="idade" min="1" max="100" step="1" value="25">
+            Data: <input type="date" name="data" min="2000-01-02">
+            <!--1 de fev de 2000... e o type number é de setinha, subindo um por um clicalicalicalica -->
+
+            <br><br><!--N ACOSTUME-->
+
+            <button type="button" onclick="alerta('ERRO FERA')"> Submit </button>
+            <!-- o button é tipo enviar, mas quando clica eu chamo a funcao do js
+            alerta, e envio o texto ERRO FERA, ai quando clica aparece isso, q é oq
+            a funcao foi mandada fazer la em funcoes.js-->
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+
 
 
 
